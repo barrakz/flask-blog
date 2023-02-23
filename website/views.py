@@ -51,11 +51,11 @@ def delete_post(id):
 @views.route("/posts/<username>")
 @login_required
 def posts(username):
-    user = User.query.filter_by(username=username).fist()
+    user = User.query.filter_by(username=username).first()
 
     if not user:
         flash("No user with that username exists.", category="error")
         return redirect(url_for("views.home"))
 
-    post = Post.query.filter_by(username=username).all()
+    post = Post.query.filter_by(author=user.id).all()
     return render_template("posts.html", user=current_user, posts=post, username=username)
