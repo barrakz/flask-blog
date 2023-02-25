@@ -16,4 +16,6 @@ Ability for users to like posts by other users<br>
 
 The application uses SQLAlchemy to interact with a database containing information about users, posts, comments, and likes. HTML templates are used to render the views, including pages for registration, login, creating and editing posts, viewing posts, and adding and deleting comments.
 
+<br>The application is configured to be run locally or on Docker.</b>
+
 An application written by Bartłomiej Rakuzy following the tutorial by TechWithTim.
